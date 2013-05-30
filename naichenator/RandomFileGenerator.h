@@ -10,5 +10,21 @@
 #define __naichenator__RandomFileGenerator__
 
 #include <iostream>
+#include <map>
+
+class RandomFileGenerator {
+public:
+    typedef std::map<uint32_t,uint32_t> SwapMap;
+
+    RandomFileGenerator(uint32_t min, uint32_t max, double probSkip);
+    virtual ~RandomFileGenerator();
+    void write(std::string filename);
+    
+private:
+    uint32_t minVal;
+    uint32_t maxVal;
+    double probSkip;
+    
+};
 
 #endif /* defined(__naichenator__RandomFileGenerator__) */

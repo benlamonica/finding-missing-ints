@@ -7,12 +7,18 @@
 //
 
 #include <iostream>
+#include "RandomFileGenerator.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    RandomFileGenerator r(0,1000000,0.1);
+    r.write("test");
     return 0;
 }
+
+
+class Naichenator {
+    
+    
+};
 

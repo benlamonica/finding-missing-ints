@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFAFC1756CA3A006CBCC8 /* main.cpp */; };
 		B5EBFAFF1756CA3A006CBCC8 /* naichenator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */; };
+		B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		B5EBFAF91756CA3A006CBCC8 /* naichenator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = naichenator; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EBFAFC1756CA3A006CBCC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = naichenator.1; sourceTree = "<group>"; };
+		B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomFileGenerator.cpp; sourceTree = "<group>"; };
+		B5EBFB061756EFE9006CBCC8 /* RandomFileGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomFileGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				B5EBFAFC1756CA3A006CBCC8 /* main.cpp */,
 				B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */,
+				B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */,
+				B5EBFB061756EFE9006CBCC8 /* RandomFileGenerator.h */,
 			);
 			path = naichenator;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */,
+				B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
