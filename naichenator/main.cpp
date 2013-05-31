@@ -9,12 +9,13 @@
 #include <iostream>
 #include <unistd.h>
 #include "RandomFileGenerator.h"
+#include "MissingNumberFinder.h"
 
 using std::cout;
 
 void usage(const std::string &errorMessage) {
     cout << errorMessage << std::endl;
-    cout << "Usage: naichenator [-g -m <minNum> -x <maxNum> -p <probability>] <-f filename>" << std::endl << std::endl;
+    cout << "Usage: naichenator [-g -p <probability>] -m <minNum> -x <maxNum> -f <filename>" << std::endl << std::endl;
 }
 
 int main(int argc, char * const argv[])
@@ -52,18 +53,20 @@ int main(int argc, char * const argv[])
 
     if (filename == "") {
         usage("You must specify a filename.");
+        return -1;
     }
     
     if (generateFile) {
         RandomFileGenerator r(min,max,probability);
         r.write(filename);
+    } else {
+        MissingNumberFinder f(filename,min,max);
+        uint32_t num = 0;
+        if (f.findMissingNumber(num)) {
+            cout << "Missing number: " << num << std::endl;
+        } else {
+            cout << "No missing numbers found." << std::endl;
+        }
     }
     return 0;
 }
-
-
-class Naichenator {
-    
-    
-};
-

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5E913C61757EB07009A05E4 /* MissingNumberFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */; };
 		B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFAFC1756CA3A006CBCC8 /* main.cpp */; };
 		B5EBFAFF1756CA3A006CBCC8 /* naichenator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */; };
 		B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MissingNumberFinder.cpp; sourceTree = "<group>"; };
+		B5E913C51757EB07009A05E4 /* MissingNumberFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingNumberFinder.h; sourceTree = "<group>"; };
 		B5EBFAF91756CA3A006CBCC8 /* naichenator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = naichenator; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EBFAFC1756CA3A006CBCC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = naichenator.1; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */,
 				B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */,
 				B5EBFB061756EFE9006CBCC8 /* RandomFileGenerator.h */,
+				B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */,
+				B5E913C51757EB07009A05E4 /* MissingNumberFinder.h */,
 			);
 			path = naichenator;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			files = (
 				B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */,
 				B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */,
+				B5E913C61757EB07009A05E4 /* MissingNumberFinder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +226,7 @@
 				B5EBFB041756CA3A006CBCC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
