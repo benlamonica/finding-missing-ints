@@ -11,12 +11,17 @@
 
 #include <iostream>
 #include <map>
+#include "Options.h"
 
+/*
+ * Generates a file with randomly shuffled integegers in a range. 
+ * Will also randomly drop selected numbers based on a probability supplied.
+ */
 class RandomFileGenerator {
 public:
     typedef std::map<uint32_t,uint32_t> SwapMap;
 
-    RandomFileGenerator(uint32_t min, uint32_t max, double probSkip);
+    RandomFileGenerator(const Options &options);
     virtual ~RandomFileGenerator();
     void write(std::string filename);
     

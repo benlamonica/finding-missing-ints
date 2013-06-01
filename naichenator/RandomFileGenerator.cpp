@@ -9,19 +9,19 @@
 #include "RandomFileGenerator.h"
 #include <fstream>
 
-RandomFileGenerator::RandomFileGenerator(uint32_t min, uint32_t max, double probSkip) {
-    this->minVal = min;
-    this->maxVal = max;
-    this->probSkip = probSkip;
-}
+RandomFileGenerator::RandomFileGenerator(const Options &options) :
+    minVal(options.getMinVal()),
+    maxVal(options.getMaxVal()),
+    probSkip(options.getProbability())
+{ }
 
-RandomFileGenerator::~RandomFileGenerator() {
-    
-}
+RandomFileGenerator::~RandomFileGenerator()
+{ }
 
 void RandomFileGenerator::write(std::string filename) {
-    SwapMap swapMem;
-    std::fstream file;
+    SwapMap swapMem; // this will grow to be about n/4 in size
+    
+    std::fstream file; // file closes at end of the method automatically RAII.
     file.open(filename,std::ios_base::out);
     
     /*Fisher and Yates Shuffle Algo
@@ -31,44 +31,43 @@ void RandomFileGenerator::write(std::string filename) {
      exchange a[j] and a[i]
      */
     
-    uint64_t largest_map_size = 0;
     uint32_t numSkipped = 0;
     std::cout << "minVal=" << minVal << " maxVal=" << maxVal << std::endl;
     std::cout << "Numbers Skipped: " << std::endl;
     for (uint32_t i = maxVal; i != minVal-1; --i ) {
-        largest_map_size = swapMem.size() > largest_map_size ? swapMem.size() : largest_map_size;
+        // generate a random number
         const uint32_t j = arc4random_uniform(i-minVal)+minVal;
+        
+        // see if we have something in the map that has already been swapped
         SwapMap::iterator iit = swapMem.find(i);
         SwapMap::iterator jit = swapMem.find(j);
         uint32_t numToWrite = 0;
+        
         if (iit == swapMem.end()) {
             if (jit == swapMem.end()) {
-                numToWrite = j;
+                numToWrite = j; // nothing swapped in the map, so just "swap" a[i] and a[j]. a[i] == j and a[j] == i, and since i is decreasing, we can just write it to the file.
             } else {
-                numToWrite = jit->second;
+                // found something in a[j], take that value
+                numToWrite = jit->second; // we've already swapped at least once, so use the value that we've swapped to write
             }
-            swapMem[j] = i;
+            swapMem[j] = i; // a[j] = i ; save i for later
         } else if (jit == swapMem.end()) {
-            numToWrite = j;
-            swapMem[j] = iit->second;
-            swapMem.erase(iit);
+            numToWrite = j; // a[i] was found, but no a[j], so just put the value of j into a[i] (which is then written to diks)
+            swapMem[j] = iit->second; // save a[j] = a[i]
+            swapMem.erase(iit); // erase a[i] since we will never see it again (i is being decremented)
         } else {
-            numToWrite = jit->second;
-            swapMem[j] = iit->second;
-            swapMem.erase(iit);
+            numToWrite = jit->second; // write a[j] to disk
+            swapMem[j] = iit->second; // a[j] = a[i]
+            swapMem.erase(iit); // erase a[i] since we'll never see it again
         }
 
         if (arc4random_uniform(1000) < (probSkip * 1000)) {
-            std::cout << numToWrite << std::endl;
+            std::cout << numToWrite << std::endl; // we're skipping this number
             numSkipped++;
         } else {
             file << numToWrite << std::endl;
         }
     }
 
-    file.close();
-    
     std::cout << "Skipped " << numSkipped << " out of " << (maxVal - minVal) << std::endl;
-    std::cout << "Largest Map Size: " << largest_map_size << std::endl;
-    std::cout << "Map Size Now: " << swapMem.size() << std::endl;
 }

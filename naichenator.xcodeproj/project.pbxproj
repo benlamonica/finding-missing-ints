@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52BD2C2175A31A400CBBB1D /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52BD2C0175A31A400CBBB1D /* Options.cpp */; };
 		B5E913C61757EB07009A05E4 /* MissingNumberFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */; };
 		B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFAFC1756CA3A006CBCC8 /* main.cpp */; };
-		B5EBFAFF1756CA3A006CBCC8 /* naichenator.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */; };
 		B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */; };
 /* End PBXBuildFile section */
 
@@ -20,18 +20,19 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				B5EBFAFF1756CA3A006CBCC8 /* naichenator.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B52BD2C0175A31A400CBBB1D /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
+		B52BD2C1175A31A400CBBB1D /* Options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Options.h; sourceTree = "<group>"; };
+		B52BD2C3175A5CCD00CBBB1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MissingNumberFinder.cpp; sourceTree = "<group>"; };
 		B5E913C51757EB07009A05E4 /* MissingNumberFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingNumberFinder.h; sourceTree = "<group>"; };
 		B5EBFAF91756CA3A006CBCC8 /* naichenator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = naichenator; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EBFAFC1756CA3A006CBCC8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = naichenator.1; sourceTree = "<group>"; };
 		B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomFileGenerator.cpp; sourceTree = "<group>"; };
 		B5EBFB061756EFE9006CBCC8 /* RandomFileGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomFileGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,11 +68,13 @@
 			isa = PBXGroup;
 			children = (
 				B5EBFAFC1756CA3A006CBCC8 /* main.cpp */,
-				B5EBFAFE1756CA3A006CBCC8 /* naichenator.1 */,
 				B5EBFB051756EFE9006CBCC8 /* RandomFileGenerator.cpp */,
 				B5EBFB061756EFE9006CBCC8 /* RandomFileGenerator.h */,
 				B5E913C41757EB07009A05E4 /* MissingNumberFinder.cpp */,
 				B5E913C51757EB07009A05E4 /* MissingNumberFinder.h */,
+				B52BD2C0175A31A400CBBB1D /* Options.cpp */,
+				B52BD2C1175A31A400CBBB1D /* Options.h */,
+				B52BD2C3175A5CCD00CBBB1D /* LICENSE */,
 			);
 			path = naichenator;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 				B5EBFAFD1756CA3A006CBCC8 /* main.cpp in Sources */,
 				B5EBFB071756EFE9006CBCC8 /* RandomFileGenerator.cpp in Sources */,
 				B5E913C61757EB07009A05E4 /* MissingNumberFinder.cpp in Sources */,
+				B52BD2C2175A31A400CBBB1D /* Options.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
