@@ -9,7 +9,7 @@
 #include "Options.h"
 #include <getopt.h>
 
-Options::Options(char * const argv[], int argc) {
+Options::Options(char * const argv[], int argc) : generateFile(false), displayHelp(false), probability(0.0), isProbSet(false), isMinSet(false), isMaxSet(false), min(0), max(10) {
     int flag;
     
     while ((flag = getopt(argc, argv, "h?m:x:p:gf:")) != -1) {

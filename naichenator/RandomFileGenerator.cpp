@@ -22,7 +22,7 @@ void RandomFileGenerator::write(std::string filename) {
     SwapMap swapMem; // this will grow to be about n/4 in size
     
     std::fstream file; // file closes at end of the method automatically RAII.
-    file.open(filename,std::ios_base::out);
+    file.open(filename.c_str(),std::ios_base::out);
     
     /*Fisher and Yates Shuffle Algo
      To shuffle an array a of n elements (indicies 0..n-1)

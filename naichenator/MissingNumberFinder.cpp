@@ -40,7 +40,7 @@ bool MissingNumberFinder::getNextNumber(std::fstream &file, uint32_t &i) {
  * @throws FileMissingException if file could not be opened.
  */
 void MissingNumberFinder::findNumbers() throw(FileMissingException) {
-    std::fstream file(filename, std::ios_base::in);
+    std::fstream file(filename.c_str(), std::ios_base::in);
     if (!file.is_open()) {
         throw FileMissingException("File not found.");
     }

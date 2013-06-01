@@ -19,7 +19,7 @@ public:
     FileMissingException(const char *what_in) : _what(what_in) {
     }
     
-    virtual ~FileMissingException() { }
+    virtual ~FileMissingException() throw () { }
     
     virtual const char *what() {
         return _what;

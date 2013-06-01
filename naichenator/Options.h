@@ -26,12 +26,15 @@ public:
     bool shouldGenerateFile() const { return generateFile; }
     bool shouldDisplayHelp() const { return displayHelp; }
 private:
-    bool generateFile = false;
-    bool displayHelp = false;
+    bool generateFile;
+    bool displayHelp;
     std::string filename;
-    double probability = 0.0;
-    bool isProbSet = false, isMinSet = false, isMaxSet = false;
-    uint32_t min = 0, max = 10;
+    double probability;
+    bool isProbSet;
+    bool isMinSet;
+    bool isMaxSet;
+    uint32_t min;
+    uint32_t max;
 };
 
 #endif /* defined(__naichenator__Options__) */

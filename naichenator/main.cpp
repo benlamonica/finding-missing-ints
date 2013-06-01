@@ -17,7 +17,7 @@ using std::cout;
 
 void usage(const std::string &errorMessage) {
     cout << errorMessage << std::endl;
-    cout << "Usage: naichenator [-g -p <probability>] -m <minNum> -x <maxNum> -f <filename>\n";
+    cout << "Usage: find_missing_ints [-g -p <probability>] -m <minNum> -x <maxNum> -f <filename>\n";
     cout << "  -g : generate random number file\n";
     cout << "  -p : probability that we will not write the number to the file\n";
     cout << "  -m : minimum number in the range\n";
